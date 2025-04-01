@@ -39,8 +39,49 @@
 
 .backgroundOverlay {
   position: fixed;
+  left: 0;
+  right: 0;
   top: 60%;
   bottom: 0;
-  width: 100%;
   background-color: hsl(195deg, 20%, 86%);
+}
+
+@media (max-width: 768px) {
+  .header {
+    width: 100%;
+  }
+
+  .characterEditor {
+    min-height: 100vh;
+    position: relative;
+  }
+
+  .characterWrapper {
+    left: 10%;
+    top: 70%;
+    position: relative;
+    width: 90%;
+  }
+
+  .controlColumn {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+    gap: 16px;
+    margin-inline-start: -32px;
+    padding-inline-start: 32px;
+    bottom: -460px;
+  }
+
+  .maxWidthWrapper {
+    z-index: 2;
+  }
+
+  .backgroundOverlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
 }
